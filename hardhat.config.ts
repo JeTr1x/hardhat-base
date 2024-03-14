@@ -35,7 +35,7 @@ const config: HardhatUserConfig = {
       }
     ]
   },
-  defaultNetwork: 'blast-sepolia',
+  defaultNetwork: 'katla',
 };
 
 export default config;
