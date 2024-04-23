@@ -14,28 +14,28 @@ const config: HardhatUserConfig = {
     ]
   },
   networks: {
-    "katla": {
-       url: "https://rpc.katla.taiko.xyz",
+    "morph": {
+       url: "https://rpc-testnet.morphl2.io",
        accounts: [process.env.PRIVATE_KEY as string],
        gasPrice: 1500000000,
     },
   },
   etherscan: {
     apiKey: {
-      katla: "abc"
+      morph: "abc"
     },
     customChains: [
       {
-        network: "katla",
-        chainId: 167008,
+        network: "morph",
+        chainId: 2710,
         urls: {
-          apiURL: "https://blockscoutapi.katla.taiko.xyz/api?module=contract&action=verify",
-          browserURL: "https://explorer.katla.taiko.xyz/"
+          apiURL: "https://explorer-api-testnet.morphl2.io/api",
+          browserURL: "https://explorer-testnet.morphl2.io",
         }
       }
     ]
   },
-  defaultNetwork: 'katla',
+  defaultNetwork: 'morph',
 };
 
 export default config;
